@@ -3,3 +3,4 @@ export default new class UserService {
         return 'this route for users'
     }
 }
+
