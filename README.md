@@ -1,2 +1,2 @@
-# Bank Project with Nodejs and other ... 
-
+# Notebook app with nodejs . 
+### open source :)
