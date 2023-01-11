@@ -1,2 +1,1 @@
-# Notebook app with nodejs . 
-### open source :)
+# open source project .
