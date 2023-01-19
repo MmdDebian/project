@@ -1,9 +1,9 @@
 import {Request , Response} from 'express';
 import service from './service';
 
-export function login(req:Request,res:Response){
+export function phoneNumberLogin(req:Request,res:Response){
     res.status(201).json({
         message : 'auth/login route is true !' ,
-        data : service.login() ,
+        data : service.phoneNumberLogin() ,
     })
 }
