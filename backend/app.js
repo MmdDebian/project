@@ -7,12 +7,17 @@ const app = express();
 let schema = buildSchema(`
     type Query {
         hello : String 
+        random : Float
     }
 `);
 
 let root = {
     hello : ()=>{
         return "hello world";
+    } ,
+
+    random : ()=>{
+        return Math.random(Math.floor * 8)
     }
 };
 
@@ -21,6 +26,7 @@ app.use('/graphql' , graphqlHTTP({
     rootValue : root ,
     graphiql : true ,
 }));
+
 
 app.listen(3000 , ()=>{
     console.log(`app running on port : 3000`)
