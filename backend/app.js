@@ -1,29 +1,29 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
+const schema = require('./schema/schema');
 const app = express();
 
 // test the data 
-let schema = buildSchema(`
-    type Query {
-        hello : String 
-        random : Float
-    }
-`);
+// let schema = buildSchema(`
+//     type Query {
+//         hello : String 
+//         random : Float
+//     }
+// `);
 
-let root = {
-    hello : ()=>{
-        return "hello world";
-    } ,
+// let root = {
+//     hello : ()=>{
+//         return "hello world";
+//     } ,
 
-    random : ()=>{
-        return Math.random(Math.floor * 8)
-    }
-};
+//     random : ()=>{
+//         return Math.random(Math.floor * 8)
+//     }
+// };
 
 app.use('/graphql' , graphqlHTTP({
     schema : schema ,
-    rootValue : root ,
     graphiql : true ,
 }));
 
